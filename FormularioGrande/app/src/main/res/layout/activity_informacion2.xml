@@ -120,8 +120,8 @@
 
     <EditText
         android:id="@+id/multiLine"
-        android:layout_width="316dp"
-        android:layout_height="188dp"
+        android:layout_width="374dp"
+        android:layout_height="210dp"
         android:background="#D3C0F4"
         android:clickable="false"
         android:ems="10"
@@ -130,8 +130,8 @@
         android:textColor="#253071"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.642" />
+        app:layout_constraintVertical_bias="0.644" />
 </androidx.constraintlayout.widget.ConstraintLayout>
