@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FormularioGrande</string>
+    <string name="title_activity_informacion">Informacion</string>
+    <string name="alta">ALTA DE PERSONAS</string>
+    <string name="nombre">Nombre</string>
+    <string name="dni">Dni</string>
+    <string name="contra">Contraseña</string>
+    <string name="repContra">Repite contraseña</string>
+    <string name="edad">Edad</string>
+    <string name="aniadir">Añadir</string>
+    <string name="recientemente">Añadido recientemente</string>
+    <string name="lista">Lista de personas</string>
+    <string name="volver">Volver</string>
+    <string name="conDif">Las contraseñas son diferentes</string>
+    <string name="existDni">El dni ya está registrado, porfavor compruebelo</string>
+    <string name="rellene">Rellene todos los campos</string>
+    <string name="exito">Creado con exito</string>
+
+</resources>

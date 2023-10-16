@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FormularioGrande</string>
+    <string name="title_activity_informacion">Informacion</string>
+    <string name="alta">REGISTRATION OF PEOPLE</string>
+    <string name="nombre">Name</string>
+    <string name="dni">Id</string>
+    <string name="contra">Password</string>
+    <string name="repContra">Repeat password</string>
+    <string name="edad">Age</string>
+    <string name="aniadir">add</string>
+    <string name="recientemente">Recently added</string>
+    <string name="lista">List of people</string>
+    <string name="volver">become</string>
+    <string name="conDif">Passwords are different</string>
+    <string name="existDni">The ID is already registered, please check it</string>
+    <string name="rellene">Fill in all fields</string>
+    <string name="exito">Successfully created</string>
+</resources>

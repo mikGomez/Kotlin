@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FormularioGrande</string>
+    <string name="title_activity_informacion">Informacion</string>
+    <string name="alta">ENREGISTREMENT DES PERSONNES</string>
+    <string name="nombre">nom</string>
+    <string name="dni">IDENTIFIANT</string>
+    <string name="contra">Mot de passe</string>
+    <string name="repContra">" Répéter le mot de passe"</string>
+    <string name="edad">âge</string>
+    <string name="aniadir">Ajouter</string>
+    <string name="recientemente">Récemment ajouté</string>
+    <string name="lista">Liste des personnes</string>
+    <string name="volver">revenir</string>
+    <string name="conDif">Les mots de passe sont différents</string>
+    <string name="existDni">La pièce d\'identité est déjà enregistrée, veuillez la vérifier</string>
+    <string name="rellene">Remplissez tous les champs</string>
+    <string name="exito">Création réussie</string>
+</resources>
