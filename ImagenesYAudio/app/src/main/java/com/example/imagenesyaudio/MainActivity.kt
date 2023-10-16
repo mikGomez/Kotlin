@@ -23,9 +23,11 @@ class MainActivity : AppCompatActivity() {
         binding.imageButton2.setOnClickListener {
             binding.imageView.setImageResource(R.drawable.ic_cositas)
             mediaPlayer.stop()
+            mediaPlayer = MediaPlayer.create(this,R.raw.pika)
         }
         binding.imageView2.setOnClickListener {
             binding.imageView.setImageResource(R.drawable.ic_cositas2)
+
         }
 
     }
