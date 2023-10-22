@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">JuegoDados</string>
+    <string name="Ganadas">Ganadas</string>
+    <string name="Tiradas">Tiradas</string>
+    <string name="Puntos">Puntos</string>
+    <string name="Jugador1">Jugador1</string>
+    <string name="Jugador2">Jugador2</string>
+    <string name="Reiniciojuego">Reinicio Juego</string>
+</resources>
