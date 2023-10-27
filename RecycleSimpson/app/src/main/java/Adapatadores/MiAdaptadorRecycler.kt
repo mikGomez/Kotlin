@@ -1,4 +1,4 @@
-package Adaptadores
+package Adapatadores
 
 import Modelo.Almacen
 import Modelo.Simpson
@@ -16,12 +16,11 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.recycler.MainActivity
-import com.example.recycler.MainActivity2
-import com.example.recycler.R
+import com.example.recyclesimpson.MainActivity
+import com.example.recyclesimpson.MainActivity2
+import com.example.recyclesimpson.R
 
-class MiAdaptadorRecycler(var personajesSimpson: ArrayList<Simpson>, var context: Context) :
-    RecyclerView.Adapter<MiAdaptadorRecycler.ViewHolder>() {
+class MiAdaptadorRecycler (var personajes : ArrayList<Simpson>, var  context: Context) : RecyclerView.Adapter<MiAdaptadorRecycler.ViewHolder>() {
 
     companion object {
         //Esta variable estática nos será muy útil para saber cual está marcado o no.
@@ -45,7 +44,7 @@ class MiAdaptadorRecycler(var personajesSimpson: ArrayList<Simpson>, var context
      * Esta a su vez llama a holder.bind, que está implementado más abajo.
      */
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = personajesSimpson.get(position)
+        val item = personajes.get(position)
         holder.bind(item, context, position, this)
     }
 
@@ -75,7 +74,7 @@ class MiAdaptadorRecycler(var personajesSimpson: ArrayList<Simpson>, var context
      */
     override fun getItemCount(): Int {
         //del array list que se pasa, el size, así sabe los elementos a pintar.
-        return personajesSimpson.size
+        return personajes.size
     }
 
 
@@ -93,7 +92,7 @@ class MiAdaptadorRecycler(var personajesSimpson: ArrayList<Simpson>, var context
 
         //Como en el ejemplo general de las listas (ProbandoListas) vemos que se puede inflar cada elemento con una card o con un layout.
         val nombrePersonaje = view.findViewById(R.id.txtNombre) as TextView
-        val tipoPersonaje = view.findViewById(R.id.txtRaza) as TextView
+        val tipoPersonaje = view.findViewById(R.id.txtHacer) as TextView
         val avatar = view.findViewById(R.id.imgImagen) as ImageView
 
         val btnDetalleEspcifico = view.findViewById<Button>(R.id.btDetalleCard) as Button
@@ -110,24 +109,24 @@ class MiAdaptadorRecycler(var personajesSimpson: ArrayList<Simpson>, var context
             miAdaptadorRecycler: MiAdaptadorRecycler
         ) {
             nombrePersonaje.text = pers.nombre
-            tipoPersonaje.text = pers.tipo
+            tipoPersonaje.text = pers.trabajo
 
-            //Para Gandalf, como ejemplo, le he puesto una imagen que se llama igual en el drawable.
-            //se podría hacer igual para los otros personajes.
-            val uri = "@drawable/" + pers.imagen
-            val imageResource: Int =
-                context.getResources().getIdentifier(uri, null, context.getPackageName())
-            var res: Drawable = context.resources.getDrawable(imageResource)
-            avatar.setImageDrawable(res)
+                //Para Gandalf, como ejemplo, le he puesto una imagen que se llama igual en el drawable.
+                //se podría hacer igual para los otros personajes.
+                val uri = "@drawable/" + pers.imagen
+                val imageResource: Int =
+                    context.getResources().getIdentifier(uri, null, context.getPackageName())
+                var res: Drawable = context.resources.getDrawable(imageResource)
+                avatar.setImageDrawable(res)
 
             //Para marcar o desmarcar al seleccionado usamos el siguiente código.
             //comparo la posición y pinto en el color elegido(blue)
             //está implementado de dos maneras, uan deprecated y actual.
-            if (pos == MiAdaptadorRecycler.seleccionado) {
+            if (pos == seleccionado) {
                 with(nombrePersonaje) {
-                    this.setTextColor(resources.getColor(R.color.blue))
+                    this.setTextColor(resources.getColor(R.color.yellow))
                 }
-                tipoPersonaje.setTextColor(R.color.blue)
+                tipoPersonaje.setTextColor(R.color.yellow)
             } else {
                 with(nombrePersonaje) {
                     this.setTextColor(resources.getColor(R.color.black))
@@ -142,15 +141,14 @@ class MiAdaptadorRecycler(var personajesSimpson: ArrayList<Simpson>, var context
             //Se levanta una escucha para cada item. Si pulsamos el seleccionado pondremos la selección a -1, (deselecciona)
             // en otro caso será el nuevo sleccionado.
             itemView.setOnClickListener {
-                if (pos == MiAdaptadorRecycler.seleccionado) {
-                    Almacen.simpsons.remove(Almacen.simpsons.get(pos));
-                    MiAdaptadorRecycler.seleccionado = -1
+                if (pos == seleccionado) {
+                    seleccionado = -1
                 } else {
-                    MiAdaptadorRecycler.seleccionado = pos
+                    seleccionado = pos
                     Log.e(
                         "ACSC0",
                         "Seleccionado: ${
-                            Almacen.simpsons.get(MiAdaptadorRecycler.seleccionado).toString()
+                            Almacen.personajes.get(seleccionado).toString()
                         }"
                     )
                 }
@@ -164,7 +162,7 @@ class MiAdaptadorRecycler(var personajesSimpson: ArrayList<Simpson>, var context
 
                 Toast.makeText(
                     context,
-                    "Valor seleccionado " + MiAdaptadorRecycler.seleccionado.toString(),
+                    "Valor seleccionado " + seleccionado.toString(),
                     Toast.LENGTH_SHORT
                 ).show()
 
@@ -173,9 +171,9 @@ class MiAdaptadorRecycler(var personajesSimpson: ArrayList<Simpson>, var context
             itemView.setOnLongClickListener(View.OnLongClickListener {
                 Log.e(
                     "ACSCO",
-                    "Seleccionado con long click: ${Almacen.simpsons.get(pos).toString()}"
+                    "Seleccionado con long click: ${Almacen.personajes.get(pos).toString()}"
                 )
-                Almacen.simpsons.removeAt(pos)
+                Almacen.personajes.removeAt(pos)
                 miAdaptadorRecycler.notifyDataSetChanged()
                 true //Tenemos que devolver un valor boolean.
             })
