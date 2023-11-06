@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "839532755785",
+    "project_id": "conexion-y-login-cb429",
+    "storage_bucket": "conexion-y-login-cb429.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839532755785:android:183a950da5b92232f13898",
+        "android_client_info": {
+          "package_name": "com.example.conexion_login_new"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9jAXD5eDymqe7QXGr_6Fq4n-ZjlWkZq8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839532755785:android:236886fd77c4445cf13898",
+        "android_client_info": {
+          "package_name": "com.example.conexion_y_login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9jAXD5eDymqe7QXGr_6Fq4n-ZjlWkZq8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

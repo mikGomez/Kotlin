@@ -1,0 +1,24 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_find
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_logo
+drawable ic_opc1
+drawable ic_opc2
+id mnBusqueda
+id mnOp1
+id mnOp2
+id textView
+id toolbarPrincipal
+layout activity_main
+menu menu
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.MenusPrueba
+style Theme.MenusPrueba
+xml backup_rules
+xml data_extraction_rules

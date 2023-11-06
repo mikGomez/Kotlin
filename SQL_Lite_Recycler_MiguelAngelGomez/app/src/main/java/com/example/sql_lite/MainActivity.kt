@@ -10,7 +10,6 @@ import android.widget.Toast
 import Auxiliar.Conexion
 import Modelo.Simpson
 import android.util.Log
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
 
