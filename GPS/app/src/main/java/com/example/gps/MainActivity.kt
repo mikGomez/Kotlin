@@ -189,6 +189,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLoca
      */
     override fun onMyLocationButtonClick(): Boolean {
         Toast.makeText(this, "Recentrando", Toast.LENGTH_SHORT).show()
+        irubicacioActual()
         return false
     }
 
